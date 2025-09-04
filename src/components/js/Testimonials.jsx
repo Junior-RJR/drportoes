@@ -10,43 +10,43 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Maria Silva",
-      location: "São Paulo, SP",
+      name: "Fabio Barreto",
+      location: "um ano atrás",
       rating: 5,
-      text: "Excelente serviço! A equipe da Doutor Portões foi muito profissional e o portão ficou perfeito. Recomendo para todos!",
-      service: "Instalação de Portão Automático",
+      text: "Atendimenro de excelência já sou cliente da Empresa Dr Portões a mais de 6 anos. Mesmo eu morando no interior de São Paulo eles continuam prestando um ótimo serviço na minha casa de São Paulo quando é necessário. Empresa nota 10 com colaboradores de muito profissionalismo e comrpometimento. Gostaria quê eles tivessem uma filial aqui na Cidade quê eu estou morando. Parabéns Dr Portôes e colaboradores.🙏🙏🙏👏👏👏",
+      // service: "Instalação de Portão Automático",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "João Santos",
-      location: "Rio de Janeiro, RJ",
+      name: "Luiza Martins",
+      location: "4 dias atrás",
       rating: 5,
-      text: "Atendimento excepcional e qualidade impecável. O portão funciona perfeitamente há mais de 2 anos sem problemas.",
-      service: "Manutenção Preventiva",
+      text: "Foram muito atenciosos e prestativos, técnico explica muito bem o defeito apontado, honesto, eu recomendo.",
+      // service: "Manutenção Preventiva",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Ana Costa",
-      location: "Belo Horizonte, MG",
+      name: "Jefferson Eufrosino",
+      location: "3 dias atrás",
       rating: 5,
-      text: "Rapidez na instalação e preço justo. A garantia deu total tranquilidade. Empresa séria e confiável!",
-      service: "Portão Deslizante",
+      text: "Fiz alguns orçamentos e tinha necessidade de fechar e executar a troca de motor e balanceamento do portão com urgência. Agendei o orçamento e fui muito bem atendido desde a marcação até a visita, negociamos valores, formas de pagamento de acordo com o que se encaixou melhor para mim e tive priorização de acordo com a minha necessidade e demonstraram muita experiência e a indicação honesta da melhor solução, índico fortemente consultar um orçamento com a empresa antes de fechar o serviço em outro lugar.",
+      // service: "Portão Deslizante",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Carlos Oliveira",
-      location: "Brasília, DF",
+      name: "Juliana Rodrigues dos Santos",
+      location: "11 meses atrás",
       rating: 5,
-      text: "Tive um problema no portão e eles vieram no mesmo dia durante o horário comercial. Atendimento excelente!",
-      service: "Reparo Emergencial",
+      text: "Recomendo o atendimento e serviço da Doutor Portões, eles fizeram a troca de peças enferrujadas do meu portão e ajuste de peso e batida. Ficou ótimo. Foram pontuais.",
+      // service: "Reparo Emergencial",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Fernanda Lima",
-      location: "Salvador, BA",
+      name: "Carlos Santos",
+      location: "11 meses atrás",
       rating: 5,
-      text: "Profissionais muito competentes e educados. O portão ficou lindo e funciona perfeitamente. Super recomendo!",
-      service: "Portão Basculante",
+      text: "Atendimento excelente, desde o primeiro contato. Afendamento rápido, atendimento pelo representante foi maravilhoso, esclareceu todas minhas dúvidas uma verdadeira aula, a instação também foi ótima. Só elogios. Eu recomendo. 👏🏿👏🏿👏🏿👏🏿",
+      // service: "Portão Basculante",
       image: "/placeholder.svg?height=80&width=80",
     },
   ]
@@ -117,7 +117,7 @@ export default function Testimonials() {
           {/* Main Testimonial */}
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg">
             <div className="flex items-center justify-center mb-8">
-              <Quote className="text-[#0a0082]" size={48} />
+              <Quote className="text-[#0f107c]" size={48} />
             </div>
 
             <div className="text-center mb-8">
@@ -133,37 +133,37 @@ export default function Testimonials() {
                 <div className="flex justify-center mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
 
                 <div className="flex items-center justify-center space-x-4">
-                  <img
+                  {/* <img
                     src={testimonials[currentTestimonial].image || "/placeholder.svg"}
                     alt={testimonials[currentTestimonial].name}
                     className="w-16 h-16 rounded-full object-cover"
-                  />
+                  /> */}
                   <div className="text-left">
                     <h4 className="font-bold text-gray-800 text-lg">{testimonials[currentTestimonial].name}</h4>
                     <p className="text-gray-600">{testimonials[currentTestimonial].location}</p>
-                    <p className="text-[#0a0082] text-sm font-medium">{testimonials[currentTestimonial].service}</p>
+                    <p className="text-[#0f107c] text-sm font-medium">{testimonials[currentTestimonial].service}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation - Hidden on mobile */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="md:block absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="md:block absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
           >
             <ChevronRight size={24} />
           </button>
 
-          {/* Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
+          {/* Dots - Hidden on mobile, visible on desktop */}
+          <div className="hidden md:flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -175,15 +175,15 @@ export default function Testimonials() {
                   }, 500)
                 }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial ? "bg-[#0a0082] w-8" : "bg-gray-300 hover:bg-gray-400"
+                  index === currentTestimonial ? "bg-[#0f107c] w-8" : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
             ))}
           </div>
         </div>
 
-        {/* Testimonial Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mt-16">
+        {/* Testimonial Grid - Hidden on mobile, visible on desktop */}
+        <div className="hidden md:grid grid-cols-3 gap-6 mt-16">
           {testimonials.slice(0, 3).map((testimonial, index) => (
             <div
               key={index}
@@ -193,11 +193,11 @@ export default function Testimonials() {
               <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
               <p className="text-gray-700 mb-4 italic">"{testimonial.text.substring(0, 100)}..."</p>
               <div className="flex items-center space-x-3">
-                <img
+                {/* <img
                   src={testimonial.image || "/placeholder.svg"}
                   alt={testimonial.name}
                   className="w-10 h-10 rounded-full object-cover"
-                />
+                /> */}
                 <div>
                   <h5 className="font-semibold text-gray-800">{testimonial.name}</h5>
                   <p className="text-gray-600 text-sm">{testimonial.location}</p>
