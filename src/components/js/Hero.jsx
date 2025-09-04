@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { ChevronRight, Shield, Clock, Award } from "lucide-react"
-import imagemHero1 from "../images/imagemHero1.jpg";
-import imagemHero2 from "../images/imagemHero2.jpg";
-import imagemHero3 from "../images/imagemHero3.jpg";
+import imagemHero1 from "../images/imagemHero1.jpg"
+import imagemHero2 from "../images/imagemHero2.jpg"
+import imagemHero3 from "../images/imagemHero3.jpg"
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -49,7 +49,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden">
+    <section id="home" className="relative h-screen overflow-hidden" style={{ marginTop: "120px" }}>
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -79,7 +79,7 @@ export default function Hero() {
               <p className="text-xl md:text-2xl text-gray-200 mb-8">{slides[currentSlide].subtitle}</p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                 <a
+                <a
                   href="https://wa.me/5511988345716?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -131,24 +131,25 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide Indicators - Smaller on mobile */}
-<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      className={`
-        rounded-full 
-        transition-all duration-300 
-        ${
-          index === currentSlide 
-            ? "bg-[#0f107c] w-4 h-2 md:w-8 md:h-3" // Ícone ativo: menor no mobile (4x2, tipo pílula), maior no desktop (8x3)
-            : "bg-white/50 w-2 h-2 md:w-3 md:h-3" // Ícone inativo: bolinha pequena no mobile (2x2), bolinha média no desktop (3x3)
-        }
-      `}
-      onClick={() => setCurrentSlide(index)}
-    />
-  ))}
-</div>
+      {/* Slide Indicators - Bolinhas redondas no mobile */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20 hidden md:flex">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`
+              rounded-full 
+              transition-all duration-300 
+              ${
+                index === currentSlide
+                  ? "bg-[#0f107c] w-8 h-3" // Ativo: apenas desktop (pílula)
+                  : "bg-white/50 w-3 h-3" // Inativo: apenas desktop (bolinha média)
+              }
+            `}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
+
     </section>
   )
 }

@@ -407,6 +407,12 @@ code {
   .grid {
     grid-template-columns: 1fr;
   }
+
+  /* Hero mobile spacing adjustment */
+  #home {
+    margin-top: 80px !important;
+    height: calc(100vh - 80px) !important;
+  }
 }
 
 @media (min-width: 769px) {
@@ -418,6 +424,12 @@ code {
   }
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Hero desktop spacing adjustment */
+  #home {
+    margin-top: 120px !important;
+    height: calc(100vh - 120px) !important;
   }
 }
 
@@ -526,4 +538,10 @@ select:focus {
   .no-print {
     display: none !important;
   }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
 }

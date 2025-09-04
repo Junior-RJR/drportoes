@@ -162,18 +162,6 @@ export default function Carousel() {
             <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
           </button>
 
-          {/* Dots Indicator - Smaller on mobile */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-1.5 h-1.5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-[#0f107c] w-3 md:w-8" : "bg-gray-300 hover:bg-gray-400"
-                }`}
-              />
-            ))}
-          </div>
         </div>
 
         {/* Thumbnails - Hidden on mobile, visible on desktop */}
