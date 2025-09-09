@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ChevronRight, Shield, Clock, Award } from "lucide-react"
-import imagemHero1 from "../images/imagemHero1.jpg"
+import imagemHero4 from "../images/imagemHero4.jpg"
 import imagemHero2 from "../images/imagemHero2.jpg"
 import imagemHero3 from "../images/imagemHero3.jpg"
 
@@ -13,7 +13,7 @@ export default function Hero() {
     {
       title: "Assistência Técnica de Portões Automáticos",
       subtitle: "Instalação, Manutenção e Reparo com Garantia",
-      image: imagemHero1,
+      image: imagemHero4,
     },
     {
       title: "Segurança e Praticidade para sua Casa",

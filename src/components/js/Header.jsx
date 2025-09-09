@@ -103,12 +103,12 @@ const Header = () => {
               >
                 Contato
               </button>
-              <button
+              {/* <button
                 onClick={() => scrollToSection("contact")}
                 className="bg-[#0f107c] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors font-medium"
               >
                 Orçamento Grátis
-              </button>
+              </button> */}
             </div>
 
             {/* Mobile Menu Button */}

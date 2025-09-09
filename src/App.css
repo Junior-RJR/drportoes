@@ -109,7 +109,7 @@ export default function Testimonials() {
         <div className="text-center mb-16 opacity-0 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">O que nossos clientes dizem</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Mais de 5.000 clientes satisfeitos confiam na qualidade dos nossos serviços
+            Mais de 6.000 clientes satisfeitos confiam na qualidade dos nossos serviços
           </p>
         </div>
 

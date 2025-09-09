@@ -9,7 +9,7 @@ export default function About() {
 
   const stats = [
     { icon: Award, number: "15+", label: "Anos de Experiência" },
-    { icon: Users, number: "5000+", label: "Clientes Satisfeitos" },
+    { icon: Users, number: "6000+", label: "Clientes Satisfeitos" },
     { icon: Clock, number: "Horário Comercial", label: "Atendimento" },
     { icon: Shield, number: "100%", label: "Garantia" },
   ]

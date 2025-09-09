@@ -165,12 +165,28 @@ export default function Services() {
                   ))}
                 </ul>
 
-                <button
+                {/* <button
                   onClick={scrollToContact}
+                  href="https://wa.me/5511988345716?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
                   className="w-full bg-[#0f107c] text-white py-2 md:py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors text-sm md:text-base"
                 >
                   Solicitar Orçamento
-                </button>
+                </button> */}
+
+                 <a
+                  href="https://wa.me/5511988345716?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#0f107c] text-white px-4 py-2 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+                >
+                  Solicitar Orçamento
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+
+
+
+
               </div>
             </div>
           </div>
