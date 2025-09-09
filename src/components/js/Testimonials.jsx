@@ -10,19 +10,19 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Fabio Barreto",
-      location: "um ano atrás",
-      rating: 5,
-      text: "Atendimenro de excelência já sou cliente da Empresa Dr Portões a mais de 6 anos. Mesmo eu morando no interior de São Paulo eles continuam prestando um ótimo serviço na minha casa de São Paulo quando é necessário. Empresa nota 10 com colaboradores de muito profissionalismo e comrpometimento. Gostaria quê eles tivessem uma filial aqui na Cidade quê eu estou morando. Parabéns Dr Portôes e colaboradores.🙏🙏🙏👏👏👏",
-      // service: "Instalação de Portão Automático",
-      image: "/placeholder.svg?height=80&width=80",
-    },
-    {
       name: "Luiza Martins",
       location: "4 dias atrás",
       rating: 5,
       text: "Foram muito atenciosos e prestativos, técnico explica muito bem o defeito apontado, honesto, eu recomendo.",
       // service: "Manutenção Preventiva",
+      image: "/placeholder.svg?height=80&width=80",
+    },
+    {
+      name: "Juliana Rodrigues dos Santos",
+      location: "11 meses atrás",
+      rating: 5,
+      text: "Recomendo o atendimento e serviço da Doutor Portões, eles fizeram a troca de peças enferrujadas do meu portão e ajuste de peso e batida. Ficou ótimo. Foram pontuais.",
+      // service: "Reparo Emergencial",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
@@ -34,11 +34,12 @@ export default function Testimonials() {
       image: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Juliana Rodrigues dos Santos",
-      location: "11 meses atrás",
+      name: "Fabio Barreto",
+      location: "um ano atrás",
       rating: 5,
-      text: "Recomendo o atendimento e serviço da Doutor Portões, eles fizeram a troca de peças enferrujadas do meu portão e ajuste de peso e batida. Ficou ótimo. Foram pontuais.",
-      // service: "Reparo Emergencial",
+      // Mantendo o texto completo aqui, o CSS vai cuidar do truncamento.
+      text: "Atendimenro de excelência já sou cliente da Empresa Dr Portões a mais de 6 anos. Mesmo eu morando no interior de São Paulo eles continuam prestando um ótimo serviço na minha casa de São Paulo quando é necessário. Empresa nota 10 com colaboradores de muito profissionalismo e comrpometimento. Gostaria quê eles tivessem uma filial aqui na Cidade quê eu estou morando. Parabéns Dr Portôes e colaboradores.🙏🙏🙏👏👏👏",
+      // service: "Instalação de Portão Automático",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
@@ -115,7 +116,7 @@ export default function Testimonials() {
 
         <div ref={testimonialRef} className="relative max-w-4xl mx-auto opacity-0">
           {/* Main Testimonial */}
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg flex flex-col justify-center">
             <div className="flex items-center justify-center mb-8">
               <Quote className="text-[#0f107c]" size={48} />
             </div>
@@ -126,18 +127,20 @@ export default function Testimonials() {
                   isAnimating ? "opacity-0 transform scale-95" : "opacity-100 transform scale-100"
                 }`}
               >
-                <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6 italic">
+                {/* Aplica diferentes tamanhos de fonte para desktop e mobile */}
+                <p className={`text-gray-700 leading-relaxed mb-6 italic
+                                md:text-2xl md:h-[150px] /* Tamanho maior e altura fixa para desktop */
+                                text-base h-[120px] /* Tamanho menor e altura fixa para mobile */
+                                overflow-hidden
+                                text-ellipsis
+                                flex items-center justify-center
+                               `}>
                   "{testimonials[currentTestimonial].text}"
                 </p>
 
                 <div className="flex justify-center mb-4">{renderStars(testimonials[currentTestimonial].rating)}</div>
 
                 <div className="flex items-center justify-center space-x-4">
-                  {/* <img
-                    src={testimonials[currentTestimonial].image || "/placeholder.svg"}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-16 h-16 rounded-full object-cover"
-                  /> */}
                   <div className="text-left">
                     <h4 className="font-bold text-gray-800 text-lg">{testimonials[currentTestimonial].name}</h4>
                     <p className="text-gray-600">{testimonials[currentTestimonial].location}</p>
@@ -148,21 +151,21 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation - Hidden on mobile */}
+          {/* Navigation */}
           <button
             onClick={prevTestimonial}
-            className="md:block absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="md:block absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={nextTestimonial}
-            className="md:block absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="md:block absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-[#0f117c7f] text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
           >
             <ChevronRight size={24} />
           </button>
 
-          {/* Dots - Hidden on mobile, visible on desktop */}
+          {/* Dots */}
           <div className="hidden md:flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
@@ -182,22 +185,24 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Testimonial Grid - Hidden on mobile, visible on desktop */}
+        {/* Testimonial Grid - Mantendo altura fixa para consistência */}
         <div className="hidden md:grid grid-cols-3 gap-6 mt-16">
           {testimonials.slice(0, 3).map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow opacity-0 animate-fade-in-up"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow opacity-0 animate-fade-in-up min-h-[250px] flex flex-col justify-between"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.text.substring(0, 100)}..."</p>
-              <div className="flex items-center space-x-3">
-                {/* <img
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="w-10 h-10 rounded-full object-cover"
-                /> */}
+              <p className="text-gray-700 mb-4 italic
+                            md:h-[100px] /* Altura fixa desktop */
+                            h-[80px]  /* Altura fixa mobile */
+                            overflow-hidden
+                            text-ellipsis
+                            flex-grow">
+                "{testimonial.text.substring(0, 100)}..."
+              </p>
+              <div className="flex items-center space-x-3 mt-auto">
                 <div>
                   <h5 className="font-semibold text-gray-800">{testimonial.name}</h5>
                   <p className="text-gray-600 text-sm">{testimonial.location}</p>
