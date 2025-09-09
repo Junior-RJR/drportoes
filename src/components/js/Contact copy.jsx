@@ -114,10 +114,9 @@ Mensagem: ${formData.message}`
           </p>
         </div>
 
-        {/* Grade principal para o formulário e informações de contato */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-12"> {/* Adicionei mb-12 para espaço antes do mapa */}
-          {/* Coluna do Formulário */}
-          <div className="bg-white rounded-2xl shadow-xl p-16 h-fit lg:self-start">
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Solicite seu Orçamento</h3>
 
             {isSubmitted ? (
@@ -235,7 +234,7 @@ Mensagem: ${formData.message}`
             )}
           </div>
 
-          {/* Coluna das Informações de Contato */}
+          {/* Contact Info */}
           <div className="space-y-8">
             <div className="grid gap-6">
               {contactInfo.map((item, index) => {
@@ -273,23 +272,29 @@ Mensagem: ${formData.message}`
                 </div>
               </div>
             </div>
+
+            {/* Map Placeholder */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <iframe
+                title="Localização no Google Maps"
+                src="https://www.google.com/maps/embed?pb=!4v1694097880472!6m8!1m7!1s3_0RRMm3AR2BtRz5Bp1XqQ!2m2!1d-23.5870126!2d-46.3956405!3f177.23358!4f0!5f1.1924812503605782"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              {/* <div className="p-4 text-center">
+                <p className="text-gray-600 font-medium">Rua Henrique Mazzauti, 219</p>
+                <p className="text-gray-600">Jardim Sapopemba, São Paulo - SP</p>
+                <p className="text-gray-500 text-sm mt-2">Atendemos toda a região metropolitana</p>
+              </div> */}
+            </div>
+
           </div>
         </div>
-
-        {/* Nova seção para o Mapa do Google, fora da grade de 2 colunas */}
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-12"> {/* Adicionei mt-12 para margem superior */}
-          <iframe
-            title="Localização no Google Maps"
-            src="https://www.google.com/maps/embed?pb=!4v1694097880472!6m8!1m7!1s3_0RRMm3AR2BtRz5Bp1XqQ!2m2!1d-23.5870126!2d-46.3956405!3f177.23358!4f0!5f1.1924812503605782"
-            width="100%"
-            height="450" // Altura fixa para o mapa ocupar bem o espaço
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-
       </div>
     </section>
   )

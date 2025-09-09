@@ -382,6 +382,8 @@ a:focus-visible {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
+
+
 /* Responsive Typography */
 @media (max-width: 768px) {
   .hero-title {

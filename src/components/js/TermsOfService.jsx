@@ -2,8 +2,8 @@
 
 export default function TermsOfService() {
   return (
-    <div className="prose max-w-none">
-      <h3 className="text-xl font-bold mb-4">Termos de Uso</h3>
+    <div className="prose max-w-none text-gray-800">
+      {/* <h3 className="text-xl font-bold mb-4">Termos de Uso</h3> */}
 
       <p className="mb-4">Ao utilizar nossos serviços, você concorda com os seguintes termos e condições.</p>
 

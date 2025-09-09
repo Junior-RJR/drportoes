@@ -62,7 +62,8 @@ const Header = () => {
         <nav className="py-2 md:py-4 px-4">
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex items-center space-x-2 md:space-x-3">
-              <img className="logo-header" src="/images/logo-dr-portoes.png" alt="Logo Doutor Portões" />
+              {/* <img className="logo-header" src="/images/logo-dr-portoes.png" alt="Logo Doutor Portões" /> */}
+              <img className="logo-header" src="/images/p2025 LOGO DOUTOR PORTÕES.png" alt="Logo Doutor Portões" />
             </div>
 
             {/* Desktop Menu */}
@@ -198,12 +199,12 @@ const Header = () => {
               </button>
 
               {/* CTA Button */}
-              <button
+              {/* <button
                 onClick={() => scrollToSection("contact")}
                 className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-xl mt-8"
               >
                 Orçamento Grátis
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

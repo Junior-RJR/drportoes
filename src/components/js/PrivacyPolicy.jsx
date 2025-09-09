@@ -2,8 +2,8 @@
 
 export default function PrivacyPolicy() {
   return (
-    <div className="prose max-w-none">
-      <h3 className="text-xl font-bold mb-4">Política de Privacidade</h3>
+    <div className="prose max-w-none text-gray-800">
+      {/* <h3 className="text-xl font-bold mb-4">Política de Privacidade</h3> */}
 
       <p className="mb-4">
         A Doutor Portões respeita sua privacidade e está comprometida em proteger suas informações pessoais.

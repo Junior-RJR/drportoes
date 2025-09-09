@@ -49,7 +49,12 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden" style={{ marginTop: "120px" }}>
+    // <section id="home" className="relative h-screen overflow-hidden" style={{ marginTop: "120px" }}>
+    <section 
+        id="home" 
+        className="relative h-screen overflow-hidden pt-32 md:pt-40 lg:pt-48"
+      >
+
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
