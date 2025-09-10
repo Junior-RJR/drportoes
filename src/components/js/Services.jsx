@@ -119,7 +119,8 @@ export default function Services() {
           {/* Service Details */}
           <div className="lg:sticky lg:top-4">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="relative h-64 md:h-80">
+              {/* <div className="relative h-64 md:h-80"> */}
+                <div className="relative h-96 md:h-[410px]">
                 {/* <video
                   src={services[activeService].image || "/placeholder.svg"}
                   alt={services[activeService].title}
@@ -133,7 +134,8 @@ export default function Services() {
                       muted
                       loop
                       playsInline
-                      className="w-full h-full object-cover"
+                      // className="w-full h-full object-cover"
+                      className="w-full h-full object-contain" 
                     />
                   ) : (
                     <img

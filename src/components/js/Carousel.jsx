@@ -117,7 +117,7 @@ export default function Carousel() {
             >
               {projects.map((project) => (
                 <div key={project.id} className="w-full flex-shrink-0">
-                  <div className="relative h-96 md:h-[500px]">
+                  <div className="relative h-[400px] md:h-[600px]">
                     {project.video ? (
                         <video
                           src={project.video}
@@ -126,12 +126,14 @@ export default function Carousel() {
                           muted
                           playsInline
                           className="w-full h-full object-cover"
+                          // className="w-full h-full object-contain" 
                         />
                       ) : (
                         <img
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
-                          className="w-full h-full object-cover"
+                          // className="w-full h-full object-cover"
+                          className="w-full h-full object-contain" // <-- MUDOU PARA object-contain
                         />
                       )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -174,7 +176,12 @@ export default function Carousel() {
                 index === currentIndex ? "ring-4 ring-blue-600 scale-105" : "hover:scale-105 "
               }`}
             >
-              <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-20 object-cover" />
+              <img 
+                src={project.image || "/placeholder.svg"} 
+                alt={project.title} 
+                // className="w-full h-28 object-"
+                className="w-full h-40 object-contain"
+              />
               <div className="absolute inset-0 bg-black/20 bg-[#0f107c]" />
             </button>
           ))}
